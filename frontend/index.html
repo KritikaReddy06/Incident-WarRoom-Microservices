@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Incident War Room</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <div id="app"></div>
+
+  <div id="war-room-overlay" class="war-room-overlay hidden" aria-hidden="true">
+    <div class="war-room-backdrop" onclick="closeWarRoom()"></div>
+    <aside class="war-room-drawer" role="dialog" aria-label="War room">
+      <div id="war-room-panel" class="war-room-inner"></div>
+    </aside>
+  </div>
+
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/sla.js"></script>
+  <script src="/js/pdf-export.js"></script>
+  <script src="/js/pages.js"></script>
+  <script src="/js/analytics.js"></script>
+  <script src="/js/socket.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/router.js"></script>
+  <script>
+    initRouter();
+  </script>
+</body>
+</html>
